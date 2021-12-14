@@ -1,0 +1,24 @@
+unit FrmFiltroProduto;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, FrmFiltroCad, Vcl.StdCtrls, Vcl.ExtCtrls;
+
+type
+  TFormFiltroProduto = class(TFormFiltroCad)
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FormFiltroProduto: TFormFiltroProduto;
+
+implementation
+
+{$R *.dfm}
+
+end.

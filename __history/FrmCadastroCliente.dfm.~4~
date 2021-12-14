@@ -1,0 +1,71 @@
+inherited FormCadastroClient: TFormCadastroClient
+  Caption = 'CadastroCliente'
+  PixelsPerInch = 96
+  TextHeight = 13
+  inherited DBGrid1: TDBGrid
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'idClientes'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Nome'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'CPF/CNPJ'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Email'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Telefone'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Cidade'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Estado'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'CEP'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Bairro'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Rua'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Numero'
+        Visible = True
+      end>
+  end
+  inherited Panel1: TPanel
+    inherited DBNavigator1: TDBNavigator
+      Hints.Strings = ()
+    end
+  end
+  inherited DataSource1: TDataSource
+    DataSet = DtmCadCliente.ClientDataSet1
+  end
+end

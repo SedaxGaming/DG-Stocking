@@ -1,0 +1,25 @@
+unit FrmManutCadNotaEntrada;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, FrmManutCadastro, Vcl.StdCtrls,
+  Vcl.Imaging.jpeg, Vcl.ExtCtrls;
+
+type
+  TFormManutCadNotaEntrada = class(TFormManutCadastro)
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FormManutCadNotaEntrada: TFormManutCadNotaEntrada;
+
+implementation
+
+{$R *.dfm}
+
+end.

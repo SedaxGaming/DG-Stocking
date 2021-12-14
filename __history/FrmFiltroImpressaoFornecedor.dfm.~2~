@@ -1,0 +1,13 @@
+inherited FormFiltroImpressaoFornecedor: TFormFiltroImpressaoFornecedor
+  Caption = 'FormFiltroImpressaoFornecedor'
+  ClientHeight = 303
+  ClientWidth = 449
+  ExplicitWidth = 465
+  ExplicitHeight = 342
+  PixelsPerInch = 96
+  TextHeight = 13
+  inherited Panel1: TPanel
+    Top = 262
+    Width = 449
+  end
+end

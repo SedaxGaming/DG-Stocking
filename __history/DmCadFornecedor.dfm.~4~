@@ -1,0 +1,16 @@
+inherited DtmCadFornecedor: TDtmCadFornecedor
+  OldCreateOrder = True
+  inherited SQLQuery1: TSQLQuery
+    DataSource = FormCadastro.DataSource1
+    SQL.Strings = (
+      'select *'
+      'from fornecedores')
+    SQLConnection = DtmConexao.SQLConnection1
+  end
+  inherited DataSetProvider1: TDataSetProvider
+    DataSet = SQLQuery1
+  end
+  inherited ClientDataSet1: TClientDataSet
+    ProviderName = 'DataSetProvider1'
+  end
+end

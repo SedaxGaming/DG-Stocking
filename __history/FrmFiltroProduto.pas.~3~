@@ -1,0 +1,73 @@
+unit FrmFiltroProduto;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, FrmFiltroCad, Vcl.StdCtrls, Vcl.ExtCtrls;
+
+type
+  TFormFiltroProduto = class(TFormFiltroCad)
+    edIDproduto: TLabeledEdit;
+    edDescricao: TLabeledEdit;
+    edValidade: TLabeledEdit;
+    edEstoqueDISP: TLabeledEdit;
+    edEmbalagem: TLabeledEdit;
+    edEstoqueRESERV: TLabeledEdit;
+    edPreco: TLabeledEdit;
+    procedure BFiltrarClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FormFiltroProduto: TFormFiltroProduto;
+
+implementation
+
+{$R *.dfm}
+
+procedure TFormFiltroProduto.BFiltrarClick(Sender: TObject);
+begin
+if trim(edidProduto.Text) <> '' then
+  begin
+    sqlFiltro := sqlFiltro + ' and UPPER(idProduto) like UPPER(' +
+      QuotedStr(edIDproduto.Text + '%' ) + ')';
+  end;
+  if trim(edDescricao.Text) <> '' then
+  begin
+    sqlFiltro := sqlFiltro + ' and UPPER(descricao) like UPPER(' +
+      QuotedStr(edDescricao.Text + '%') + ')';
+  end;
+  if trim(edValidade.Text) <> '' then
+  begin
+    sqlFiltro := sqlFiltro + ' and UPPER(validade) like UPPER(' +
+      QuotedStr(edValidade.Text + '%') + ')';
+  end;
+  if trim(edEstoqueDisp.Text) <> '' then
+  begin
+    sqlFiltro := sqlFiltro + ' and UPPER(estoqueDisp) like UPPER(' +
+      QuotedStr(edEstoqueDisp.Text + '%') + ')';
+  end;
+  if trim(edEstoquereserv.Text) <> '' then
+  begin
+    sqlFiltro := sqlFiltro + ' and UPPER(estoqueReserv) like UPPER(' +
+      QuotedStr(edestoqueReserv.Text + '%') + ')';
+  end;
+  if trim(edPreco.Text) <> '' then
+  begin
+    sqlFiltro := sqlFiltro + ' and UPPER(Preco) like UPPER(' +
+      QuotedStr(edPreco.Text + '%') + ')';
+  end;
+  if trim(edEmbalagem.Text) <> '' then
+  begin
+    sqlFiltro := sqlFiltro + ' and UPPER(embalagem) like UPPER(' +
+      QuotedStr(edEmbalagem.Text + '%') + ')';
+  end;
+  sqlfiltro := sqlFiltro + ' order by idProduto';
+  inherited;
+end;
+
+end.

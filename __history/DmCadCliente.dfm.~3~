@@ -1,0 +1,7 @@
+inherited DtmCadCliente: TDtmCadCliente
+  inherited SQLQuery1: TSQLQuery
+    SQL.Strings = (
+      'select *'
+      'from clientes')
+  end
+end

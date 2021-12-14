@@ -1,0 +1,27 @@
+inherited FormFiltroClientes: TFormFiltroClientes
+  Caption = 'FiltroClientes'
+  ClientHeight = 388
+  ClientWidth = 696
+  ExplicitWidth = 712
+  ExplicitHeight = 427
+  PixelsPerInch = 96
+  TextHeight = 13
+  inherited Panel1: TPanel
+    Width = 696
+    Height = 322
+    ExplicitWidth = 602
+  end
+  inherited Panel2: TPanel
+    Top = 322
+    Width = 696
+    DesignSize = (
+      696
+      66)
+    inherited BFiltrar: TButton
+      Left = 613
+    end
+    inherited BCancelar: TButton
+      Left = 613
+    end
+  end
+end

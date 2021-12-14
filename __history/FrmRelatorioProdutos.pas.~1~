@@ -1,0 +1,25 @@
+unit FrmRelatorioProdutos;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, FrmRelatorio, Data.FMTBcd, Data.DB,
+  Data.SqlExpr, QRCtrls, Vcl.Imaging.jpeg, QuickRpt, Vcl.ExtCtrls;
+
+type
+  TFormRelatorioProdutos = class(TFormRelatorio)
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FormRelatorioProdutos: TFormRelatorioProdutos;
+
+implementation
+
+{$R *.dfm}
+
+end.

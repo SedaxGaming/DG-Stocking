@@ -1,0 +1,42 @@
+object FormFiltroImpressao: TFormFiltroImpressao
+  Left = 0
+  Top = 0
+  Caption = 'FormFiltroImpressao'
+  ClientHeight = 201
+  ClientWidth = 447
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Panel1: TPanel
+    Left = 0
+    Top = 160
+    Width = 447
+    Height = 41
+    Align = alBottom
+    TabOrder = 0
+    object bFechar: TButton
+      Left = 360
+      Top = 8
+      Width = 75
+      Height = 25
+      Caption = 'Fechar'
+      TabOrder = 0
+      OnClick = bFecharClick
+    end
+    object bImprimir: TButton
+      Left = 264
+      Top = 8
+      Width = 75
+      Height = 25
+      Caption = 'Imprimir'
+      TabOrder = 1
+      OnClick = bImprimirClick
+    end
+  end
+end

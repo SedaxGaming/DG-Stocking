@@ -1,0 +1,24 @@
+unit FrmFiltroClientes;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, FrmFiltroCad, Vcl.StdCtrls, Vcl.ExtCtrls;
+
+type
+  TFormFiltroClientes = class(TFormFiltroCad)
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FormFiltroClientes: TFormFiltroClientes;
+
+implementation
+
+{$R *.dfm}
+
+end.

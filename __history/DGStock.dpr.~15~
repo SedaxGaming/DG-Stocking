@@ -1,0 +1,36 @@
+program DGStock;
+
+uses
+  Vcl.Forms,
+  FrmMenu in 'FrmMenu.pas' {FormMenu},
+  DmConexao in 'DmConexao.pas' {DtmConexao: TDataModule},
+  FrmCadastro in 'FrmCadastro.pas' {FormCadastro},
+  DmCadastro in 'DmCadastro.pas' {DtmCadastro: TDataModule},
+  DmCadCliente in 'DmCadCliente.pas' {DtmCadCliente: TDataModule},
+  DmCadFornecedor in 'DmCadFornecedor.pas' {DtmCadFornecedor: TDataModule},
+  DmCadProd in 'DmCadProd.pas' {DtmCadProd: TDataModule},
+  FrmCadastroCliente in 'FrmCadastroCliente.pas' {FormCadastroClient},
+  FrmCadastroFornecedor in 'FrmCadastroFornecedor.pas' {FormCadastroFornecedor},
+  FrmCadastroProduto in 'FrmCadastroProduto.pas' {FormCadastroProduto},
+  FrmFiltroCad in 'FrmFiltroCad.pas' {FormFiltroCad},
+  FrmFiltroClientes in 'FrmFiltroClientes.pas' {FormFiltroClientes},
+  FrmFiltroFornecedor in 'FrmFiltroFornecedor.pas' {FormFiltroFornecedor},
+  FrmFiltroProduto in 'FrmFiltroProduto.pas' {FormFiltroProduto},
+  FrmManutCadastro in 'FrmManutCadastro.pas' {FormManutCadastro},
+  FrmManutCliente in 'FrmManutCliente.pas' {FormManutCadCliente},
+  frmManutProduto in 'frmManutProduto.pas' {FormManutCadProdutos},
+  frmManutCadFornecedor in 'frmManutCadFornecedor.pas' {FormManutFornecedor},
+  FrmMestreDetalhe in 'FrmMestreDetalhe.pas' {FormMestreDetalhe},
+  DmMestreDetalhe in 'DmMestreDetalhe.pas' {DtmMestreDetalhe: TDataModule};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TDtmConexao, DtmConexao);
+  Application.CreateForm(TFormMenu, FormMenu);
+  Application.CreateForm(TFormMestreDetalhe, FormMestreDetalhe);
+  Application.CreateForm(TDtmMestreDetalhe, DtmMestreDetalhe);
+  Application.Run;
+end.

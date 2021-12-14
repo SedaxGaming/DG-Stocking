@@ -1,0 +1,13 @@
+inherited FormCadastroClient: TFormCadastroClient
+  Caption = 'CadastroCliente'
+  PixelsPerInch = 96
+  TextHeight = 13
+  inherited Panel1: TPanel
+    inherited DBNavigator1: TDBNavigator
+      Hints.Strings = ()
+    end
+  end
+  inherited DataSource1: TDataSource
+    DataSet = DtmCadCliente.ClientDataSet1
+  end
+end

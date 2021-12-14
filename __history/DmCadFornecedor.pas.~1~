@@ -1,0 +1,26 @@
+unit DmCadFornecedor;
+
+interface
+
+uses
+  System.SysUtils, System.Classes, DmCadastro, Data.FMTBcd, Datasnap.DBClient,
+  Datasnap.Provider, Data.DB, Data.SqlExpr;
+
+type
+  TDtmCadFornecedor = class(TDtmCadastro)
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  DtmCadFornecedor: TDtmCadFornecedor;
+
+implementation
+
+{%CLASSGROUP 'Vcl.Controls.TControl'}
+
+{$R *.dfm}
+
+end.

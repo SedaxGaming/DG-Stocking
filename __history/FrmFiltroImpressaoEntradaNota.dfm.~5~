@@ -1,0 +1,301 @@
+inherited FormRelatorioEntradaNota: TFormRelatorioEntradaNota
+  Caption = 'FormRelatorioEntradaNota'
+  ClientHeight = 515
+  ClientWidth = 760
+  ExplicitWidth = 776
+  ExplicitHeight = 554
+  PixelsPerInch = 96
+  TextHeight = 13
+  inherited QuickRep: TQuickRep
+    Left = -8
+    Top = -8
+    Functions.DATA = (
+      '0'
+      '0'
+      #39#39)
+    Page.Values = (
+      100.000000000000000000
+      2970.000000000000000000
+      100.000000000000000000
+      2100.000000000000000000
+      100.000000000000000000
+      100.000000000000000000
+      0.000000000000000000)
+    ExplicitLeft = -8
+    ExplicitTop = -8
+    inherited PageHeaderBand1: TQRBand
+      Size.Values = (
+        261.937500000000000000
+        1899.708333333333000000)
+      inherited QRImage1: TQRImage
+        Size.Values = (
+          277.812500000000000000
+          0.000000000000000000
+          0.000000000000000000
+          1822.979166666667000000)
+      end
+      inherited QRSysData1: TQRSysData
+        Width = 68
+        Size.Values = (
+          44.979166666666670000
+          1510.770833333333000000
+          222.250000000000000000
+          179.916666666666700000)
+        FontSize = 10
+        ExplicitWidth = 68
+      end
+    end
+    inherited TitleBand1: TQRBand
+      Size.Values = (
+        121.708333333333300000
+        1899.708333333333000000)
+      inherited QRLabel2: TQRLabel
+        Size.Values = (
+          44.979166666666670000
+          127.000000000000000000
+          31.750000000000000000
+          1619.250000000000000000)
+        Caption = 'Relat'#243'rio de Entrada de Notas'
+        FontSize = 10
+      end
+    end
+    inherited ColumnHeaderBand1: TQRBand
+      Size.Values = (
+        105.833333333333300000
+        1899.708333333333000000)
+    end
+    inherited DetailBand1: TQRBand
+      Size.Values = (
+        105.833333333333300000
+        1899.708333333333000000)
+    end
+    inherited PageFooterBand1: TQRBand
+      Size.Values = (
+        105.833333333333300000
+        1899.708333333333000000)
+      inherited QRSysData2: TQRSysData
+        Left = 670
+        Width = 46
+        Size.Values = (
+          44.979166666666670000
+          1772.708333333333000000
+          42.333333333333330000
+          121.708333333333300000)
+        FontSize = 10
+        ExplicitLeft = 670
+        ExplicitWidth = 46
+      end
+    end
+    object QRBand1: TQRBand
+      Left = 38
+      Top = 303
+      Width = 718
+      Height = 40
+      AlignToBottom = False
+      TransparentBand = False
+      ForceNewColumn = False
+      ForceNewPage = False
+      Size.Values = (
+        105.833333333333300000
+        1899.708333333333000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
+      BandType = rbGroupHeader
+    end
+    object QRSubDetail1: TQRSubDetail
+      Left = 38
+      Top = 343
+      Width = 718
+      Height = 40
+      AlignToBottom = False
+      TransparentBand = False
+      ForceNewColumn = False
+      ForceNewPage = False
+      Size.Values = (
+        105.833333333333300000
+        1899.708333333333000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
+      PrintBefore = False
+      PrintIfEmpty = True
+    end
+  end
+  inherited SQLQuery1: TSQLQuery
+    Params = <
+      item
+        DataType = ftInteger
+        Name = 'Fornecedores_idFornecedor'
+        ParamType = ptInput
+      end>
+    SQL.Strings = (
+      
+        'SELECT idCompra, Data, ValorTotal, idFornecedor, Nome, Cidade, S' +
+        'iglaEstado'
+      'FROM Compra'
+      
+        'INNER JOIN Fornecedores ON compra.Fornecedores_idFornecedor = Fo' +
+        'rnecedores.idFornecedor'
+      'WHERE IdFornecedor = :Fornecedores_idFornecedor'
+      '')
+    Left = 56
+    Top = 384
+    object SQLQuery1idCompra: TIntegerField
+      FieldName = 'idCompra'
+      Required = True
+    end
+    object SQLQuery1Data: TDateField
+      FieldName = 'Data'
+    end
+    object SQLQuery1ValorTotal: TFMTBCDField
+      FieldName = 'ValorTotal'
+      Precision = 14
+      Size = 2
+    end
+    object SQLQuery1idFornecedor: TIntegerField
+      FieldName = 'idFornecedor'
+      Required = True
+    end
+    object SQLQuery1Nome: TStringField
+      FieldName = 'Nome'
+      Size = 50
+    end
+    object SQLQuery1Cidade: TStringField
+      FieldName = 'Cidade'
+      Size = 50
+    end
+    object SQLQuery1SiglaEstado: TStringField
+      FieldName = 'SiglaEstado'
+      FixedChar = True
+      Size = 2
+    end
+  end
+  object DataSource1: TDataSource
+    DataSet = SQLQuery1
+    Left = 56
+    Top = 442
+  end
+  object DataSetProvider1: TDataSetProvider
+    DataSet = SQLQuery1
+    Left = 128
+    Top = 384
+  end
+  object ClientDataSet1: TClientDataSet
+    Active = True
+    Aggregates = <>
+    Params = <>
+    ProviderName = 'DataSetProvider1'
+    Left = 128
+    Top = 440
+    object ClientDataSet1idCompra: TIntegerField
+      FieldName = 'idCompra'
+      Required = True
+    end
+    object ClientDataSet1Data: TDateField
+      FieldName = 'Data'
+    end
+    object ClientDataSet1ValorTotal: TFMTBCDField
+      FieldName = 'ValorTotal'
+      Precision = 14
+      Size = 2
+    end
+    object ClientDataSet1idFornecedor: TIntegerField
+      FieldName = 'idFornecedor'
+      Required = True
+    end
+    object ClientDataSet1Nome: TStringField
+      FieldName = 'Nome'
+      Size = 50
+    end
+    object ClientDataSet1Cidade: TStringField
+      FieldName = 'Cidade'
+      Size = 50
+    end
+    object ClientDataSet1SiglaEstado: TStringField
+      FieldName = 'SiglaEstado'
+      FixedChar = True
+      Size = 2
+    end
+    object ClientDataSet1SQLQuery2: TDataSetField
+      FieldName = 'SQLQuery2'
+    end
+  end
+  object SQLQuery2: TSQLQuery
+    DataSource = DataSource1
+    MaxBlobSize = -1
+    Params = <
+      item
+        DataType = ftInteger
+        Name = 'idCompra'
+        ParamType = ptInput
+      end>
+    SQL.Strings = (
+      'SELECT IdProduto, Descricao, Embalagem, Quantidade, Valor, Total'
+      'FROM produtoscompra'
+      
+        'INNER JOIN `produtos` ON produtos.`idProduto` = produtoscompra.`' +
+        'Produtos_idProduto`'
+      'WHERE produtosCompra.Compra_idCompra= :idCompra')
+    SQLConnection = DtmConexao.SQLConnection1
+    Left = 216
+    Top = 384
+    object SQLQuery2IdProduto: TIntegerField
+      FieldName = 'IdProduto'
+      Required = True
+    end
+    object SQLQuery2Descricao: TStringField
+      FieldName = 'Descricao'
+      Size = 45
+    end
+    object SQLQuery2Embalagem: TStringField
+      FieldName = 'Embalagem'
+      Size = 10
+    end
+    object SQLQuery2Quantidade: TStringField
+      FieldName = 'Quantidade'
+      Size = 45
+    end
+    object SQLQuery2Valor: TFMTBCDField
+      FieldName = 'Valor'
+      Precision = 17
+      Size = 2
+    end
+    object SQLQuery2Total: TFMTBCDField
+      FieldName = 'Total'
+      Precision = 17
+      Size = 2
+    end
+  end
+  object ClientDataSet2: TClientDataSet
+    Aggregates = <>
+    DataSetField = ClientDataSet1SQLQuery2
+    Params = <>
+    Left = 216
+    Top = 440
+    object ClientDataSet2IdProduto: TIntegerField
+      FieldName = 'IdProduto'
+      Required = True
+    end
+    object ClientDataSet2Descricao: TStringField
+      FieldName = 'Descricao'
+      Size = 45
+    end
+    object ClientDataSet2Embalagem: TStringField
+      FieldName = 'Embalagem'
+      Size = 10
+    end
+    object ClientDataSet2Quantidade: TStringField
+      FieldName = 'Quantidade'
+      Size = 45
+    end
+    object ClientDataSet2Valor: TFMTBCDField
+      FieldName = 'Valor'
+      Precision = 17
+      Size = 2
+    end
+    object ClientDataSet2Total: TFMTBCDField
+      FieldName = 'Total'
+      Precision = 17
+      Size = 2
+    end
+  end
+end

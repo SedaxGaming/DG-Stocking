@@ -1,0 +1,6 @@
+inherited FormFiltroImpressaoFornecedor: TFormFiltroImpressaoFornecedor
+  Caption = 'FormFiltroImpressaoFornecedor'
+  ExplicitWidth = 463
+  PixelsPerInch = 96
+  TextHeight = 13
+end

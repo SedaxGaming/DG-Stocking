@@ -1,0 +1,31 @@
+unit FrmFiltroFornecedor;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, FrmFiltroCad, Vcl.StdCtrls, Vcl.ExtCtrls;
+
+type
+  TFormFiltroFornecedor = class(TFormFiltroCad)
+    edIDfornecedor: TLabeledEdit;
+    edNome: TLabeledEdit;
+    edSiglaEstado: TLabeledEdit;
+    edCNPJ: TLabeledEdit;
+    edEmail: TLabeledEdit;
+    edCidade: TLabeledEdit;
+    edTelefone: TLabeledEdit;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FormFiltroFornecedor: TFormFiltroFornecedor;
+
+implementation
+
+{$R *.dfm}
+
+end.

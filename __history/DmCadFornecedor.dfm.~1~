@@ -1,0 +1,2 @@
+inherited DtmCadFornecedor: TDtmCadFornecedor
+end

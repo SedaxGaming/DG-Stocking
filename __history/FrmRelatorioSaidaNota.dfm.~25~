@@ -1,0 +1,888 @@
+inherited FormRelatorioSaidaNota: TFormRelatorioSaidaNota
+  Caption = 'FormRelatorioSaidaNota'
+  ClientHeight = 534
+  ClientWidth = 767
+  ExplicitWidth = 783
+  ExplicitHeight = 573
+  PixelsPerInch = 96
+  TextHeight = 13
+  inherited QuickRep: TQuickRep
+    Left = -3
+    Top = -8
+    Frame.DrawTop = True
+    Frame.DrawBottom = True
+    DataSet = ClientDataSet1
+    Functions.DATA = (
+      '0'
+      '0'
+      #39#39)
+    Page.Values = (
+      100.000000000000000000
+      2970.000000000000000000
+      100.000000000000000000
+      2100.000000000000000000
+      100.000000000000000000
+      100.000000000000000000
+      0.000000000000000000)
+    PreviewInitialState = wsMaximized
+    ExplicitLeft = -3
+    ExplicitTop = -8
+    inherited PageHeaderBand1: TQRBand
+      Size.Values = (
+        261.937500000000000000
+        1899.708333333333000000)
+      inherited QRImage1: TQRImage
+        Size.Values = (
+          277.812500000000000000
+          0.000000000000000000
+          0.000000000000000000
+          1822.979166666667000000)
+      end
+      inherited QRSysData1: TQRSysData
+        Size.Values = (
+          44.979166666666670000
+          1510.770833333333000000
+          222.250000000000000000
+          314.854166666666700000)
+        FontSize = 10
+      end
+    end
+    inherited TitleBand1: TQRBand
+      Size.Values = (
+        121.708333333333300000
+        1899.708333333333000000)
+      inherited QRLabel2: TQRLabel
+        Size.Values = (
+          44.979166666666670000
+          127.000000000000000000
+          31.750000000000000000
+          1619.250000000000000000)
+        Caption = 'Relat'#243'rio de Saida'
+        FontSize = 10
+      end
+    end
+    inherited ColumnHeaderBand1: TQRBand
+      Size.Values = (
+        105.833333333333300000
+        1899.708333333333000000)
+      object QRLabel1: TQRLabel
+        Left = 12
+        Top = 6
+        Width = 48
+        Height = 17
+        Size.Values = (
+          44.979166666666670000
+          31.750000000000000000
+          15.875000000000000000
+          127.000000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
+        Alignment = taLeftJustify
+        AlignToBand = False
+        Caption = 'IdVenda'
+        Color = clWhite
+        Transparent = False
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
+        FontSize = 10
+      end
+      object QRLabel3: TQRLabel
+        Left = 88
+        Top = 6
+        Width = 51
+        Height = 17
+        Size.Values = (
+          44.979166666666670000
+          232.833333333333300000
+          15.875000000000000000
+          134.937500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
+        Alignment = taLeftJustify
+        AlignToBand = False
+        Caption = 'IdCliente'
+        Color = clWhite
+        Transparent = False
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
+        FontSize = 10
+      end
+      object QRLabel4: TQRLabel
+        Left = 159
+        Top = 6
+        Width = 41
+        Height = 17
+        Size.Values = (
+          44.979166666666670000
+          420.687500000000000000
+          15.875000000000000000
+          108.479166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
+        Alignment = taLeftJustify
+        AlignToBand = False
+        Caption = 'Cliente'
+        Color = clWhite
+        Transparent = False
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
+        FontSize = 10
+      end
+      object QRLabel5: TQRLabel
+        Left = 288
+        Top = 6
+        Width = 28
+        Height = 17
+        Size.Values = (
+          44.979166666666670000
+          762.000000000000000000
+          15.875000000000000000
+          74.083333333333330000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
+        Alignment = taLeftJustify
+        AlignToBand = False
+        Caption = 'Data'
+        Color = clWhite
+        Transparent = False
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
+        FontSize = 10
+      end
+      object QRLabel10: TQRLabel
+        Left = 642
+        Top = 6
+        Width = 59
+        Height = 17
+        Size.Values = (
+          44.979166666666670000
+          1698.625000000000000000
+          15.875000000000000000
+          156.104166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
+        Alignment = taRightJustify
+        AlignToBand = False
+        Caption = 'ValorTotal'
+        Color = clWhite
+        Transparent = False
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
+        FontSize = 10
+      end
+      object QRLabel11: TQRLabel
+        Left = 360
+        Top = 6
+        Width = 41
+        Height = 17
+        Size.Values = (
+          44.979166666666670000
+          952.500000000000000000
+          15.875000000000000000
+          108.479166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
+        Alignment = taLeftJustify
+        AlignToBand = False
+        Caption = 'Cidade'
+        Color = clWhite
+        Transparent = False
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
+        FontSize = 10
+      end
+      object QRLabel12: TQRLabel
+        Left = 472
+        Top = 6
+        Width = 42
+        Height = 17
+        Size.Values = (
+          44.979166666666670000
+          1248.833333333333000000
+          15.875000000000000000
+          111.125000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
+        Alignment = taLeftJustify
+        AlignToBand = False
+        Caption = 'Estado'
+        Color = clWhite
+        Transparent = False
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
+        FontSize = 10
+      end
+    end
+    inherited DetailBand1: TQRBand
+      Height = 42
+      Frame.DrawTop = True
+      Frame.DrawBottom = True
+      Size.Values = (
+        111.125000000000000000
+        1899.708333333333000000)
+      ExplicitHeight = 42
+      object QRDBText1: TQRDBText
+        Left = 12
+        Top = 19
+        Width = 55
+        Height = 17
+        Size.Values = (
+          44.979166666666670000
+          31.750000000000000000
+          50.270833333333330000
+          145.520833333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
+        Alignment = taLeftJustify
+        AlignToBand = False
+        Color = clWhite
+        DataSet = ClientDataSet1
+        DataField = 'idVendas'
+        Transparent = False
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
+        FontSize = 10
+      end
+      object QRDBText2: TQRDBText
+        Left = 288
+        Top = 17
+        Width = 28
+        Height = 17
+        Size.Values = (
+          44.979166666666670000
+          762.000000000000000000
+          44.979166666666670000
+          74.083333333333330000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
+        Alignment = taLeftJustify
+        AlignToBand = False
+        Color = clWhite
+        DataSet = ClientDataSet1
+        DataField = 'Data'
+        Transparent = False
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
+        FontSize = 10
+      end
+      object QRDBText5: TQRDBText
+        Left = 159
+        Top = 19
+        Width = 35
+        Height = 17
+        Size.Values = (
+          44.979166666666670000
+          420.687500000000000000
+          50.270833333333330000
+          92.604166666666670000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
+        Alignment = taLeftJustify
+        AlignToBand = False
+        Color = clWhite
+        DataSet = ClientDataSet1
+        DataField = 'Nome'
+        Transparent = False
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
+        FontSize = 10
+      end
+      object QRDBText8: TQRDBText
+        Left = 642
+        Top = 19
+        Width = 59
+        Height = 17
+        Size.Values = (
+          44.979166666666670000
+          1698.625000000000000000
+          50.270833333333330000
+          156.104166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
+        Alignment = taRightJustify
+        AlignToBand = False
+        Color = clWhite
+        DataSet = ClientDataSet1
+        DataField = 'ValorTotal'
+        Transparent = False
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
+        FontSize = 10
+      end
+      object QRDBText9: TQRDBText
+        Left = 88
+        Top = 17
+        Width = 58
+        Height = 17
+        Size.Values = (
+          44.979166666666670000
+          232.833333333333300000
+          44.979166666666670000
+          153.458333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
+        Alignment = taLeftJustify
+        AlignToBand = False
+        Color = clWhite
+        DataSet = ClientDataSet1
+        DataField = 'idClientes'
+        Transparent = False
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
+        FontSize = 10
+      end
+      object QRDBText4: TQRDBText
+        Left = 360
+        Top = 19
+        Width = 41
+        Height = 17
+        Size.Values = (
+          44.979166666666670000
+          952.500000000000000000
+          50.270833333333330000
+          108.479166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
+        Alignment = taLeftJustify
+        AlignToBand = False
+        Color = clWhite
+        DataSet = ClientDataSet1
+        DataField = 'Cidade'
+        Transparent = False
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
+        FontSize = 10
+      end
+      object QRDBText6: TQRDBText
+        Left = 472
+        Top = 19
+        Width = 42
+        Height = 17
+        Size.Values = (
+          44.979166666666670000
+          1248.833333333333000000
+          50.270833333333330000
+          111.125000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
+        Alignment = taLeftJustify
+        AlignToBand = False
+        Color = clWhite
+        DataSet = ClientDataSet1
+        DataField = 'Estado'
+        Transparent = False
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
+        FontSize = 10
+      end
+    end
+    inherited PageFooterBand1: TQRBand
+      Top = 345
+      Size.Values = (
+        105.833333333333300000
+        1899.708333333333000000)
+      ExplicitTop = 345
+      inherited QRSysData2: TQRSysData
+        Size.Values = (
+          44.979166666666670000
+          1793.875000000000000000
+          42.333333333333330000
+          21.166666666666670000)
+        FontSize = 10
+      end
+    end
+    object QRSubDetail1: TQRSubDetail
+      Left = 38
+      Top = 305
+      Width = 718
+      Height = 40
+      AlignToBottom = False
+      TransparentBand = False
+      ForceNewColumn = False
+      ForceNewPage = False
+      Size.Values = (
+        105.833333333333300000
+        1899.708333333333000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
+      Master = QuickRep
+      DataSet = ClientDataSet2
+      HeaderBand = QRBand1
+      PrintBefore = False
+      PrintIfEmpty = True
+      object QRDBText3: TQRDBText
+        Left = 88
+        Top = 6
+        Width = 59
+        Height = 17
+        Size.Values = (
+          44.979166666666670000
+          232.833333333333300000
+          15.875000000000000000
+          156.104166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
+        Alignment = taLeftJustify
+        AlignToBand = False
+        Color = clWhite
+        DataSet = ClientDataSet2
+        DataField = 'Descricao'
+        Transparent = False
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
+        FontSize = 10
+      end
+    end
+    object QRBand1: TQRBand
+      Left = 38
+      Top = 265
+      Width = 718
+      Height = 40
+      AlignToBottom = False
+      TransparentBand = False
+      ForceNewColumn = False
+      ForceNewPage = False
+      Size.Values = (
+        105.833333333333300000
+        1899.708333333333000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
+      BandType = rbGroupHeader
+      object QRLabel6: TQRLabel
+        Left = 12
+        Top = 6
+        Width = 38
+        Height = 17
+        Size.Values = (
+          44.979166666666670000
+          31.750000000000000000
+          15.875000000000000000
+          100.541666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
+        Alignment = taLeftJustify
+        AlignToBand = False
+        Caption = 'idProd'
+        Color = clWhite
+        Transparent = False
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
+        FontSize = 10
+      end
+      object QRLabel7: TQRLabel
+        Left = 88
+        Top = 6
+        Width = 46
+        Height = 17
+        Size.Values = (
+          44.979166666666670000
+          232.833333333333300000
+          15.875000000000000000
+          121.708333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
+        Alignment = taLeftJustify
+        AlignToBand = False
+        Caption = 'Produto'
+        Color = clWhite
+        Transparent = False
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
+        FontSize = 10
+      end
+      object QRLabel8: TQRLabel
+        Left = 159
+        Top = 6
+        Width = 67
+        Height = 17
+        Size.Values = (
+          44.979166666666670000
+          420.687500000000000000
+          15.875000000000000000
+          177.270833333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
+        Alignment = taLeftJustify
+        AlignToBand = False
+        Caption = 'Quantidade'
+        Color = clWhite
+        Transparent = False
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
+        FontSize = 10
+      end
+      object QRLabel9: TQRLabel
+        Left = 584
+        Top = 6
+        Width = 31
+        Height = 17
+        Size.Values = (
+          44.979166666666670000
+          1545.166666666667000000
+          15.875000000000000000
+          82.020833333333330000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
+        Alignment = taLeftJustify
+        AlignToBand = False
+        Caption = 'Valor'
+        Color = clWhite
+        Transparent = False
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
+        FontSize = 10
+      end
+    end
+  end
+  inherited SQLQuery1: TSQLQuery
+    Active = True
+    SQL.Strings = (
+      'SELECT *'
+      'FROM vendas'
+      
+        'INNER JOIN clientes ON clientes.idClientes = vendas.Clientes_idC' +
+        'lientes')
+    Left = 64
+    Top = 392
+    object SQLQuery1idVendas: TIntegerField
+      FieldName = 'idVendas'
+      Required = True
+    end
+    object SQLQuery1Clientes_idClientes: TIntegerField
+      FieldName = 'Clientes_idClientes'
+      Required = True
+    end
+    object SQLQuery1Data: TDateField
+      FieldName = 'Data'
+    end
+    object SQLQuery1ValorTotal: TFMTBCDField
+      FieldName = 'ValorTotal'
+      Precision = 17
+      Size = 2
+    end
+    object SQLQuery1idClientes: TIntegerField
+      FieldName = 'idClientes'
+      Required = True
+    end
+    object SQLQuery1Nome: TStringField
+      FieldName = 'Nome'
+      Size = 45
+    end
+    object SQLQuery1CPFCNPJ: TStringField
+      FieldName = 'CPFCNPJ'
+      FixedChar = True
+      Size = 12
+    end
+    object SQLQuery1Email: TStringField
+      FieldName = 'Email'
+      Size = 45
+    end
+    object SQLQuery1Telefone: TStringField
+      FieldName = 'Telefone'
+      Size = 16
+    end
+    object SQLQuery1Cidade: TStringField
+      FieldName = 'Cidade'
+      Size = 45
+    end
+    object SQLQuery1Estado: TStringField
+      FieldName = 'Estado'
+      Size = 45
+    end
+    object SQLQuery1CEP: TStringField
+      FieldName = 'CEP'
+      Size = 45
+    end
+    object SQLQuery1Bairro: TStringField
+      FieldName = 'Bairro'
+      Size = 45
+    end
+    object SQLQuery1Rua: TStringField
+      FieldName = 'Rua'
+      Size = 45
+    end
+    object SQLQuery1Numero: TStringField
+      FieldName = 'Numero'
+      Size = 10
+    end
+  end
+  object SQLQuery2: TSQLQuery
+    DataSource = DataSource1
+    MaxBlobSize = -1
+    Params = <
+      item
+        DataType = ftInteger
+        Name = 'idVendas'
+        ParamType = ptInput
+      end>
+    SQL.Strings = (
+      'SELECT *'
+      'FROM produtosvenda'
+      
+        'INNER JOIN `produtos` ON produtos.`idProduto` = produtosvenda.`P' +
+        'rodutos_idProduto`'
+      'WHERE produtosvenda.Vendas_idVendas = :idVendas')
+    SQLConnection = DtmConexao.SQLConnection1
+    Left = 240
+    Top = 392
+    object SQLQuery2Vendas_idVendas: TIntegerField
+      FieldName = 'Vendas_idVendas'
+      Required = True
+    end
+    object SQLQuery2Produtos_idProduto: TIntegerField
+      FieldName = 'Produtos_idProduto'
+      Required = True
+    end
+    object SQLQuery2Quantidade: TStringField
+      FieldName = 'Quantidade'
+      Size = 45
+    end
+    object SQLQuery2Valor: TFMTBCDField
+      FieldName = 'Valor'
+      Precision = 17
+      Size = 2
+    end
+    object SQLQuery2Total: TFMTBCDField
+      FieldName = 'Total'
+      Precision = 17
+      Size = 2
+    end
+    object SQLQuery2idProduto: TIntegerField
+      FieldName = 'idProduto'
+      Required = True
+    end
+    object SQLQuery2Descricao: TStringField
+      FieldName = 'Descricao'
+      Size = 45
+    end
+    object SQLQuery2Validade: TDateField
+      FieldName = 'Validade'
+    end
+    object SQLQuery2EstoqueDisponivel: TIntegerField
+      FieldName = 'EstoqueDisponivel'
+    end
+    object SQLQuery2EstoqueReservado: TIntegerField
+      FieldName = 'EstoqueReservado'
+    end
+    object SQLQuery2preco: TFMTBCDField
+      FieldName = 'preco'
+      Precision = 17
+      Size = 2
+    end
+    object SQLQuery2Embalagem: TStringField
+      FieldName = 'Embalagem'
+      Size = 10
+    end
+    object SQLQuery2EmbalagemUnitaria: TStringField
+      FieldName = 'EmbalagemUnitaria'
+      Size = 10
+    end
+    object SQLQuery2Fornecedores_idFornecedor: TIntegerField
+      FieldName = 'Fornecedores_idFornecedor'
+      Required = True
+    end
+  end
+  object DataSource1: TDataSource
+    DataSet = SQLQuery1
+    Left = 64
+    Top = 448
+  end
+  object DataSetProvider1: TDataSetProvider
+    DataSet = SQLQuery1
+    Left = 152
+    Top = 384
+  end
+  object ClientDataSet1: TClientDataSet
+    Active = True
+    Aggregates = <>
+    Params = <>
+    ProviderName = 'DataSetProvider1'
+    Left = 152
+    Top = 432
+    object ClientDataSet1idVendas: TIntegerField
+      FieldName = 'idVendas'
+      Required = True
+    end
+    object ClientDataSet1Clientes_idClientes: TIntegerField
+      FieldName = 'Clientes_idClientes'
+      Required = True
+    end
+    object ClientDataSet1Data: TDateField
+      FieldName = 'Data'
+    end
+    object ClientDataSet1ValorTotal: TFMTBCDField
+      FieldName = 'ValorTotal'
+      DisplayFormat = '##,##0.00'
+      Precision = 17
+      Size = 2
+    end
+    object ClientDataSet1idClientes: TIntegerField
+      FieldName = 'idClientes'
+      Required = True
+    end
+    object ClientDataSet1Nome: TStringField
+      FieldName = 'Nome'
+      Size = 45
+    end
+    object ClientDataSet1CPFCNPJ: TStringField
+      FieldName = 'CPFCNPJ'
+      FixedChar = True
+      Size = 12
+    end
+    object ClientDataSet1Email: TStringField
+      FieldName = 'Email'
+      Size = 45
+    end
+    object ClientDataSet1Telefone: TStringField
+      FieldName = 'Telefone'
+      Size = 16
+    end
+    object ClientDataSet1Cidade: TStringField
+      FieldName = 'Cidade'
+      Size = 45
+    end
+    object ClientDataSet1Estado: TStringField
+      FieldName = 'Estado'
+      Size = 45
+    end
+    object ClientDataSet1CEP: TStringField
+      FieldName = 'CEP'
+      Size = 45
+    end
+    object ClientDataSet1Bairro: TStringField
+      FieldName = 'Bairro'
+      Size = 45
+    end
+    object ClientDataSet1Rua: TStringField
+      FieldName = 'Rua'
+      Size = 45
+    end
+    object ClientDataSet1Numero: TStringField
+      FieldName = 'Numero'
+      Size = 10
+    end
+    object ClientDataSet1SQLQuery2: TDataSetField
+      FieldName = 'SQLQuery2'
+    end
+  end
+  object ClientDataSet2: TClientDataSet
+    Active = True
+    Aggregates = <>
+    DataSetField = ClientDataSet1SQLQuery2
+    Params = <>
+    Left = 240
+    Top = 432
+    object ClientDataSet2Vendas_idVendas: TIntegerField
+      FieldName = 'Vendas_idVendas'
+      Required = True
+    end
+    object ClientDataSet2Produtos_idProduto: TIntegerField
+      FieldName = 'Produtos_idProduto'
+      Required = True
+    end
+    object ClientDataSet2Quantidade: TStringField
+      FieldName = 'Quantidade'
+      Size = 45
+    end
+    object ClientDataSet2Valor: TFMTBCDField
+      FieldName = 'Valor'
+      DisplayFormat = '##,##0.00'
+      Precision = 17
+      Size = 2
+    end
+    object ClientDataSet2Total: TFMTBCDField
+      FieldName = 'Total'
+      DisplayFormat = '##,##0.00'
+      Precision = 17
+      Size = 2
+    end
+    object ClientDataSet2idProduto: TIntegerField
+      FieldName = 'idProduto'
+      Required = True
+    end
+    object ClientDataSet2Descricao: TStringField
+      FieldName = 'Descricao'
+      Size = 45
+    end
+    object ClientDataSet2Validade: TDateField
+      FieldName = 'Validade'
+    end
+    object ClientDataSet2EstoqueDisponivel: TIntegerField
+      FieldName = 'EstoqueDisponivel'
+    end
+    object ClientDataSet2EstoqueReservado: TIntegerField
+      FieldName = 'EstoqueReservado'
+    end
+    object ClientDataSet2preco: TFMTBCDField
+      FieldName = 'preco'
+      Precision = 17
+      Size = 2
+    end
+    object ClientDataSet2Embalagem: TStringField
+      FieldName = 'Embalagem'
+      Size = 10
+    end
+    object ClientDataSet2EmbalagemUnitaria: TStringField
+      FieldName = 'EmbalagemUnitaria'
+      Size = 10
+    end
+    object ClientDataSet2Fornecedores_idFornecedor: TIntegerField
+      FieldName = 'Fornecedores_idFornecedor'
+      Required = True
+    end
+  end
+end

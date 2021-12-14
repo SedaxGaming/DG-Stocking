@@ -1,0 +1,29 @@
+unit DmMestreDetalhe;
+
+interface
+
+uses
+  System.SysUtils, System.Classes, DmCadastro, Data.FMTBcd, Data.DB,
+  Datasnap.DBClient, Datasnap.Provider, Data.SqlExpr;
+
+type
+  TDtmMestreDetalhe = class(TDtmCadastro)
+    DataSource1: TDataSource;
+    SQLQuery2: TSQLQuery;
+    ClientDataSet2: TClientDataSet;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  DtmMestreDetalhe: TDtmMestreDetalhe;
+
+implementation
+
+{%CLASSGROUP 'Vcl.Controls.TControl'}
+
+{$R *.dfm}
+
+end.

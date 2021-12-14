@@ -1,0 +1,17 @@
+inherited FormFiltroClientes: TFormFiltroClientes
+  Caption = 'FiltroClientes'
+  ExplicitWidth = 598
+  PixelsPerInch = 96
+  TextHeight = 13
+  inherited Panel1: TPanel
+    ExplicitWidth = 819
+  end
+  inherited Panel2: TPanel
+    inherited BFiltrar: TButton
+      ExplicitLeft = 733
+    end
+    inherited BCancelar: TButton
+      ExplicitLeft = 733
+    end
+  end
+end

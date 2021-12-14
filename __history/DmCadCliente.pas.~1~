@@ -1,0 +1,26 @@
+unit DmCadCliente;
+
+interface
+
+uses
+  System.SysUtils, System.Classes, DmCadastro, Data.FMTBcd, Datasnap.DBClient,
+  Datasnap.Provider, Data.DB, Data.SqlExpr;
+
+type
+  TDtmCadCliente = class(TDtmCadastro)
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  DtmCadCliente: TDtmCadCliente;
+
+implementation
+
+{%CLASSGROUP 'Vcl.Controls.TControl'}
+
+{$R *.dfm}
+
+end.

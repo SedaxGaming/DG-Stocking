@@ -1,0 +1,111 @@
+unit FrmRelatorioSaidaNota;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, FrmRelatorio, Data.FMTBcd, Data.DB,
+  Data.SqlExpr, QRCtrls, Vcl.Imaging.jpeg, QuickRpt, Vcl.ExtCtrls,
+  Datasnap.DBClient, Datasnap.Provider;
+
+type
+  TFormRelatorioSaidaNota = class(TFormRelatorio)
+    SQLQuery2: TSQLQuery;
+    SQLQuery1idVendas: TIntegerField;
+    SQLQuery1Clientes_idClientes: TIntegerField;
+    SQLQuery1Data: TDateField;
+    SQLQuery1ValorTotal: TFMTBCDField;
+    DataSource1: TDataSource;
+    QRDBText1: TQRDBText;
+    QRDBText2: TQRDBText;
+    QRDBText5: TQRDBText;
+    QRDBText8: TQRDBText;
+    QRSubDetail1: TQRSubDetail;
+    QRDBText9: TQRDBText;
+    QRLabel1: TQRLabel;
+    QRLabel3: TQRLabel;
+    QRLabel4: TQRLabel;
+    QRLabel5: TQRLabel;
+    QRLabel10: TQRLabel;
+    SQLQuery1idClientes: TIntegerField;
+    SQLQuery1Nome: TStringField;
+    SQLQuery1CPFCNPJ: TStringField;
+    SQLQuery1Email: TStringField;
+    SQLQuery1Telefone: TStringField;
+    SQLQuery1Cidade: TStringField;
+    SQLQuery1Estado: TStringField;
+    SQLQuery1CEP: TStringField;
+    SQLQuery1Bairro: TStringField;
+    SQLQuery1Rua: TStringField;
+    SQLQuery1Numero: TStringField;
+    SQLQuery2Vendas_idVendas: TIntegerField;
+    SQLQuery2Produtos_idProduto: TIntegerField;
+    SQLQuery2Quantidade: TStringField;
+    SQLQuery2Valor: TFMTBCDField;
+    SQLQuery2Total: TFMTBCDField;
+    SQLQuery2idProduto: TIntegerField;
+    SQLQuery2Descricao: TStringField;
+    SQLQuery2Validade: TDateField;
+    SQLQuery2EstoqueDisponivel: TIntegerField;
+    SQLQuery2EstoqueReservado: TIntegerField;
+    SQLQuery2preco: TFMTBCDField;
+    SQLQuery2Embalagem: TStringField;
+    SQLQuery2EmbalagemUnitaria: TStringField;
+    SQLQuery2Fornecedores_idFornecedor: TIntegerField;
+    QRDBText3: TQRDBText;
+    DataSetProvider1: TDataSetProvider;
+    ClientDataSet1: TClientDataSet;
+    ClientDataSet2: TClientDataSet;
+    ClientDataSet1idVendas: TIntegerField;
+    ClientDataSet1Clientes_idClientes: TIntegerField;
+    ClientDataSet1Data: TDateField;
+    ClientDataSet1ValorTotal: TFMTBCDField;
+    ClientDataSet1idClientes: TIntegerField;
+    ClientDataSet1Nome: TStringField;
+    ClientDataSet1CPFCNPJ: TStringField;
+    ClientDataSet1Email: TStringField;
+    ClientDataSet1Telefone: TStringField;
+    ClientDataSet1Cidade: TStringField;
+    ClientDataSet1Estado: TStringField;
+    ClientDataSet1CEP: TStringField;
+    ClientDataSet1Bairro: TStringField;
+    ClientDataSet1Rua: TStringField;
+    ClientDataSet1Numero: TStringField;
+    ClientDataSet1SQLQuery2: TDataSetField;
+    ClientDataSet2Vendas_idVendas: TIntegerField;
+    ClientDataSet2Produtos_idProduto: TIntegerField;
+    ClientDataSet2Quantidade: TStringField;
+    ClientDataSet2Valor: TFMTBCDField;
+    ClientDataSet2Total: TFMTBCDField;
+    ClientDataSet2idProduto: TIntegerField;
+    ClientDataSet2Descricao: TStringField;
+    ClientDataSet2Validade: TDateField;
+    ClientDataSet2EstoqueDisponivel: TIntegerField;
+    ClientDataSet2EstoqueReservado: TIntegerField;
+    ClientDataSet2preco: TFMTBCDField;
+    ClientDataSet2Embalagem: TStringField;
+    ClientDataSet2EmbalagemUnitaria: TStringField;
+    ClientDataSet2Fornecedores_idFornecedor: TIntegerField;
+    QRBand1: TQRBand;
+    QRLabel6: TQRLabel;
+    QRLabel7: TQRLabel;
+    QRLabel8: TQRLabel;
+    QRLabel9: TQRLabel;
+    QRLabel11: TQRLabel;
+    QRDBText4: TQRDBText;
+    QRDBText6: TQRDBText;
+    QRLabel12: TQRLabel;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FormRelatorioSaidaNota: TFormRelatorioSaidaNota;
+
+implementation
+
+{$R *.dfm}
+
+end.

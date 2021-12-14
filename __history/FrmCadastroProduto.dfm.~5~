@@ -1,0 +1,81 @@
+inherited FormCadastroProduto: TFormCadastroProduto
+  Caption = 'CadastroProduto'
+  ExplicitWidth = 767
+  ExplicitHeight = 505
+  PixelsPerInch = 96
+  TextHeight = 13
+  inherited DBGrid1: TDBGrid
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'idProduto'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Descricao'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Validade'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'EstoqueDisponivel'
+        Width = 64
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'EstoqueReservado'
+        Width = 64
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'preco'
+        Width = 64
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Embalagem'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'EmbalagemUnitaria'
+        Width = 64
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Fornecedores_idFornecedor'
+        Width = 64
+        Visible = True
+      end>
+  end
+  inherited Panel1: TPanel
+    inherited DBNavigator1: TDBNavigator
+      Hints.Strings = ()
+    end
+    inherited Panel6: TPanel
+      ExplicitLeft = 293
+      ExplicitHeight = 74
+    end
+  end
+  inherited Panel2: TPanel
+    ExplicitWidth = 751
+    inherited Panel4: TPanel
+      ExplicitLeft = 521
+    end
+    inherited Panel5: TPanel
+      ExplicitWidth = 319
+    end
+  end
+  inherited DataSource1: TDataSource
+    DataSet = DtmCadProd.ClientDataSet1
+  end
+end

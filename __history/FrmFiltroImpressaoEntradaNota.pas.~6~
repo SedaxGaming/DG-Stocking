@@ -1,0 +1,36 @@
+unit FrmFiltroImpressaoEntradaNota;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, FrmFiltroImpressao, Vcl.StdCtrls,
+  Vcl.Imaging.jpeg, Vcl.ExtCtrls;
+
+type
+  TFormFiltroImpressao1 = class(TFormFiltroImpressao)
+    Label2: TLabel;
+    Label3: TLabel;
+    Label6: TLabel;
+    Label1: TLabel;
+    Label4: TLabel;
+    Label7: TLabel;
+    edIDVenda: TEdit;
+    edIDCliente: TEdit;
+    EdData: TEdit;
+    EdCidade: TEdit;
+    EdEstado: TEdit;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FormFiltroImpressao1: TFormFiltroImpressao1;
+
+implementation
+
+{$R *.dfm}
+
+end.

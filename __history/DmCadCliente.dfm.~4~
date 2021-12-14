@@ -1,0 +1,9 @@
+inherited DtmCadCliente: TDtmCadCliente
+  OldCreateOrder = True
+  inherited SQLQuery1: TSQLQuery
+    DataSource = FormCadastro.DataSource1
+    SQL.Strings = (
+      'select *'
+      'from clientes')
+  end
+end

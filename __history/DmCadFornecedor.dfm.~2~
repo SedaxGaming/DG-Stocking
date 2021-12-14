@@ -1,0 +1,7 @@
+inherited DtmCadFornecedor: TDtmCadFornecedor
+  inherited SQLQuery1: TSQLQuery
+    SQL.Strings = (
+      'select *'
+      'from fornecedores')
+  end
+end

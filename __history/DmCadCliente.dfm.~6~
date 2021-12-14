@@ -1,0 +1,106 @@
+inherited DtmCadCliente: TDtmCadCliente
+  OldCreateOrder = True
+  inherited SQLQuery1: TSQLQuery
+    DataSource = FormCadastro.DataSource1
+    SQL.Strings = (
+      'select *'
+      'from clientes')
+    SQLConnection = DtmConexao.SQLConnection1
+    object SQLQuery1idClientes: TIntegerField
+      FieldName = 'idClientes'
+      Required = True
+    end
+    object SQLQuery1Nome: TStringField
+      FieldName = 'Nome'
+      Size = 45
+    end
+    object SQLQuery1CPFCNPJ: TStringField
+      FieldName = 'CPF/CNPJ'
+      FixedChar = True
+      Size = 12
+    end
+    object SQLQuery1Email: TStringField
+      FieldName = 'Email'
+      Size = 45
+    end
+    object SQLQuery1Telefone: TStringField
+      FieldName = 'Telefone'
+      Size = 16
+    end
+    object SQLQuery1Cidade: TStringField
+      FieldName = 'Cidade'
+      Size = 45
+    end
+    object SQLQuery1Estado: TStringField
+      FieldName = 'Estado'
+      Size = 45
+    end
+    object SQLQuery1CEP: TStringField
+      FieldName = 'CEP'
+      Size = 45
+    end
+    object SQLQuery1Bairro: TStringField
+      FieldName = 'Bairro'
+      Size = 45
+    end
+    object SQLQuery1Rua: TStringField
+      FieldName = 'Rua'
+      Size = 45
+    end
+    object SQLQuery1Numero: TStringField
+      FieldName = 'Numero'
+      Size = 10
+    end
+  end
+  inherited DataSetProvider1: TDataSetProvider
+    DataSet = SQLQuery1
+  end
+  inherited ClientDataSet1: TClientDataSet
+    ProviderName = 'DataSetProvider1'
+    object ClientDataSet1idClientes: TIntegerField
+      FieldName = 'idClientes'
+      Required = True
+    end
+    object ClientDataSet1Nome: TStringField
+      FieldName = 'Nome'
+      Size = 45
+    end
+    object ClientDataSet1CPFCNPJ: TStringField
+      FieldName = 'CPF/CNPJ'
+      FixedChar = True
+      Size = 12
+    end
+    object ClientDataSet1Email: TStringField
+      FieldName = 'Email'
+      Size = 45
+    end
+    object ClientDataSet1Telefone: TStringField
+      FieldName = 'Telefone'
+      Size = 16
+    end
+    object ClientDataSet1Cidade: TStringField
+      FieldName = 'Cidade'
+      Size = 45
+    end
+    object ClientDataSet1Estado: TStringField
+      FieldName = 'Estado'
+      Size = 45
+    end
+    object ClientDataSet1CEP: TStringField
+      FieldName = 'CEP'
+      Size = 45
+    end
+    object ClientDataSet1Bairro: TStringField
+      FieldName = 'Bairro'
+      Size = 45
+    end
+    object ClientDataSet1Rua: TStringField
+      FieldName = 'Rua'
+      Size = 45
+    end
+    object ClientDataSet1Numero: TStringField
+      FieldName = 'Numero'
+      Size = 10
+    end
+  end
+end

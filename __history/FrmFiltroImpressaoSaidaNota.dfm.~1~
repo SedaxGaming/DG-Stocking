@@ -1,0 +1,11 @@
+inherited FormFiltroImpressaoSaidaNota: TFormFiltroImpressaoSaidaNota
+  Caption = 'FormFiltroImpressaoSaidaNota'
+  ClientHeight = 386
+  ExplicitWidth = 463
+  ExplicitHeight = 425
+  PixelsPerInch = 96
+  TextHeight = 13
+  inherited Panel1: TPanel
+    Top = 329
+  end
+end

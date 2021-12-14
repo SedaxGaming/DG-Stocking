@@ -1,0 +1,29 @@
+unit FrmMestreDetalhe;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, FrmCadastro, Data.DB, Vcl.StdCtrls,
+  Vcl.DBCtrls, Vcl.Imaging.jpeg, Vcl.ExtCtrls, Vcl.Grids, Vcl.DBGrids;
+
+type
+  TFormMestreDetalhe = class(TFormCadastro)
+    Panel7: TPanel;
+    DBGridITENS: TDBGrid;
+    Panel8: TPanel;
+    DataSource2: TDataSource;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FormMestreDetalhe: TFormMestreDetalhe;
+
+implementation
+
+{$R *.dfm}
+
+end.

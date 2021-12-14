@@ -1,0 +1,12 @@
+inherited FormMestreDetalhe: TFormMestreDetalhe
+  Caption = 'FormMestreDetalhe'
+  ExplicitWidth = 767
+  ExplicitHeight = 505
+  PixelsPerInch = 96
+  TextHeight = 13
+  inherited Panel1: TPanel
+    inherited DBNavigator1: TDBNavigator
+      Hints.Strings = ()
+    end
+  end
+end

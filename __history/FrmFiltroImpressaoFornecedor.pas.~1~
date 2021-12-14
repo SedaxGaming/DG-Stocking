@@ -1,0 +1,25 @@
+unit FrmFiltroImpressaoFornecedor;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, FrmFiltroImpressao, Vcl.StdCtrls,
+  Vcl.ExtCtrls;
+
+type
+  TFormFiltroImpressaoFornecedor = class(TFormFiltroImpressao)
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FormFiltroImpressaoFornecedor: TFormFiltroImpressaoFornecedor;
+
+implementation
+
+{$R *.dfm}
+
+end.

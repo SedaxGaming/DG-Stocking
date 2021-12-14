@@ -1,0 +1,76 @@
+unit FrmFiltroImpressaoClientes;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, FrmFiltroImpressao, Vcl.StdCtrls,
+  Vcl.ExtCtrls;
+
+type
+  TFormFiltroImpressaoClientes = class(TFormFiltroImpressao)
+    Label1: TLabel;
+    edID: TEdit;
+    edNome: TEdit;
+    EdCidade: TEdit;
+    Label2: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    EdEstado: TEdit;
+    EdEmail: TEdit;
+    EdTelefone: TEdit;
+    Label5: TLabel;
+    Label6: TLabel;
+    Label7: TLabel;
+    procedure bFecharClick(Sender: TObject);
+  private
+    { Private declarations }
+    FsqlFiltro: string;
+  public
+    { Public declarations }
+    property sqlFiltro: string read FsqlFiltro write FsqlFiltro;
+  end;
+
+var
+  FormFiltroImpressaoClientes: TFormFiltroImpressaoClientes;
+
+implementation
+
+{$R *.dfm}
+procedure TFormFiltroImpressaoClientes.bFecharClick(Sender: TObject);
+begin
+  sqlFiltro := 'where 1=1';
+if trim(edId.Text) <>'' then
+  begin
+    sqlFiltro := sqlFiltro + ' and UPPER(IDClientes) like UPPER(' +
+      QuotedStr(edID.Text + '%' ) + ')';
+end;
+if trim(edNome.Text) <>'' then
+  begin
+    sqlFiltro := sqlFiltro + ' and UPPER(Nome) like UPPER(' +
+      QuotedStr(edNome.Text + '%' ) + ')';
+  end;
+  if trim(edCidade.Text) <>'' then
+  begin
+    sqlFiltro := sqlFiltro + ' and UPPER(Cidade) like UPPER(' +
+      QuotedStr(edCidade.Text + '%' ) + ')';
+  end;
+  if trim(edEstado.Text) <>'' then
+  begin
+    sqlFiltro := sqlFiltro + ' and UPPER(Estado) like UPPER(' +
+      QuotedStr(edEstado.Text + '%' ) + ')';
+  end;
+  if trim(edEmail.Text) <>'' then
+  begin
+    sqlFiltro := sqlFiltro + ' and UPPER(Email) like UPPER(' +
+      QuotedStr(edEmail.Text + '%' ) + ')';
+  end;
+  if trim(edTelefone.Text) <>'' then
+  begin
+    sqlFiltro := sqlFiltro + ' and UPPER(Telefone) like UPPER(' +
+      QuotedStr(edTelefone.Text + '%' ) + ')';
+  end;
+
+  inherited;
+end;
+end.

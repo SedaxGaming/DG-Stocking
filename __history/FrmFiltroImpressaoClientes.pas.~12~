@@ -1,0 +1,48 @@
+unit FrmFiltroImpressaoClientes;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, FrmFiltroImpressao, Vcl.StdCtrls,
+  Vcl.ExtCtrls;
+
+type
+  TFormFiltroImpressaoClientes = class(TFormFiltroImpressao)
+    Label1: TLabel;
+    edID: TEdit;
+    edNome: TEdit;
+    EdCidade: TEdit;
+    Label2: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    EdEstado: TEdit;
+    EdEmail: TEdit;
+    EdTelefone: TEdit;
+    Label5: TLabel;
+    Label6: TLabel;
+    Label7: TLabel;
+    procedure bImprimirClick(Sender: TObject);
+  private
+    { Private declarations }
+    FsqlFiltro: string;
+  public
+    { Public declarations }
+    property sqlFiltro: string read FsqlFiltro write FsqlFiltro;
+  end;
+
+var
+  FormFiltroImpressaoClientes: TFormFiltroImpressaoClientes;
+
+implementation
+
+{$R *.dfm}
+
+uses FrmRelatorioClientes;
+enprocedure TFormFiltroImpressaoClientes.bImprimirClick(Sender: TObject);
+begin
+  inherited;
+
+end;
+
+d.

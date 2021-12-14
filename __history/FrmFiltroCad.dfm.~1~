@@ -1,0 +1,61 @@
+object FormFiltroCad: TFormFiltroCad
+  Left = 0
+  Top = 0
+  Caption = 'FormFiltro'
+  ClientHeight = 201
+  ClientWidth = 582
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  DesignSize = (
+    582
+    201)
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Panel1: TPanel
+    Left = -237
+    Top = 0
+    Width = 819
+    Height = 169
+    Anchors = [akLeft, akTop, akRight]
+    TabOrder = 0
+    ExplicitWidth = 684
+  end
+  object Panel2: TPanel
+    Left = -234
+    Top = 135
+    Width = 816
+    Height = 66
+    Anchors = [akLeft, akTop, akRight]
+    TabOrder = 1
+    ExplicitWidth = 681
+    DesignSize = (
+      816
+      66)
+    object BFiltrar: TButton
+      Left = 733
+      Top = 1
+      Width = 75
+      Height = 25
+      Anchors = [akTop, akRight]
+      Caption = 'Filtrar'
+      TabOrder = 0
+      ExplicitLeft = 598
+    end
+    object BCancelar: TButton
+      Left = 733
+      Top = 32
+      Width = 75
+      Height = 25
+      Anchors = [akTop, akRight]
+      Caption = 'Cancelar'
+      ModalResult = 2
+      TabOrder = 1
+      ExplicitLeft = 598
+    end
+  end
+end

@@ -1,0 +1,106 @@
+unit FrmRelatorioSaidaNota;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, FrmRelatorio, Data.FMTBcd, Data.DB,
+  Data.SqlExpr, QRCtrls, Vcl.Imaging.jpeg, QuickRpt, Vcl.ExtCtrls,
+  Datasnap.DBClient, Datasnap.Provider;
+
+type
+  TFormRelatorioSaidaNota = class(TFormRelatorio)
+    SQLQuery2: TSQLQuery;
+    DataSetProvider1: TDataSetProvider;
+    ClientDataSet1: TClientDataSet;
+    ClientDataSet2: TClientDataSet;
+    SQLQuery1idVendas: TIntegerField;
+    SQLQuery1Clientes_idClientes: TIntegerField;
+    SQLQuery1Data: TDateField;
+    SQLQuery1ValorTotal: TFMTBCDField;
+    ClientDataSet1idVendas: TIntegerField;
+    ClientDataSet1Clientes_idClientes: TIntegerField;
+    ClientDataSet1Data: TDateField;
+    ClientDataSet1ValorTotal: TFMTBCDField;
+    DataSource1: TDataSource;
+    ClientDataSet1SQLQuery2: TDataSetField;
+    QRDBText1: TQRDBText;
+    QRLabel3: TQRLabel;
+    QRLabel4: TQRLabel;
+    QRLabel5: TQRLabel;
+    QRLabel6: TQRLabel;
+    QRLabel7: TQRLabel;
+    QRLabel8: TQRLabel;
+    QRDBText2: TQRDBText;
+    QRDBText5: TQRDBText;
+    QRDBText8: TQRDBText;
+    QRSubDetail1: TQRSubDetail;
+    QRDBText4: TQRDBText;
+    QRDBText6: TQRDBText;
+    QRDBText7: TQRDBText;
+    SQLQuery2Vendas_idVendas: TIntegerField;
+    SQLQuery2Produtos_idProduto: TIntegerField;
+    SQLQuery2Quantidade: TStringField;
+    SQLQuery2Valor: TFMTBCDField;
+    SQLQuery2Total: TFMTBCDField;
+    SQLQuery2idVendas: TIntegerField;
+    SQLQuery2Clientes_idClientes: TIntegerField;
+    SQLQuery2Data: TDateField;
+    SQLQuery2ValorTotal: TFMTBCDField;
+    ClientDataSet2Vendas_idVendas: TIntegerField;
+    ClientDataSet2Produtos_idProduto: TIntegerField;
+    ClientDataSet2Quantidade: TStringField;
+    ClientDataSet2Valor: TFMTBCDField;
+    ClientDataSet2Total: TFMTBCDField;
+    SQLQProdutos: TSQLQuery;
+    SQLQProdutosidProduto: TIntegerField;
+    SQLQProdutosDescricao: TStringField;
+    DSPprodutos: TDataSetProvider;
+    CDSProdutos: TClientDataSet;
+    CDSProdutosidProduto: TIntegerField;
+    CDSProdutosDescricao: TStringField;
+    SQLQClientes: TSQLQuery;
+    SQLQClientesidClientes: TIntegerField;
+    SQLQClientesNome: TStringField;
+    SQLQClientesCPFCNPJ: TStringField;
+    SQLQClientesEmail: TStringField;
+    SQLQClientesTelefone: TStringField;
+    SQLQClientesCidade: TStringField;
+    SQLQClientesEstado: TStringField;
+    SQLQClientesCEP: TStringField;
+    SQLQClientesBairro: TStringField;
+    SQLQClientesRua: TStringField;
+    SQLQClientesNumero: TStringField;
+    DSPClientes: TDataSetProvider;
+    CDSClientes: TClientDataSet;
+    CDSClientesidClientes: TIntegerField;
+    CDSClientesNome: TStringField;
+    CDSClientesCPFCNPJ: TStringField;
+    CDSClientesEmail: TStringField;
+    CDSClientesTelefone: TStringField;
+    CDSClientesCidade: TStringField;
+    CDSClientesEstado: TStringField;
+    CDSClientesCEP: TStringField;
+    CDSClientesBairro: TStringField;
+    CDSClientesRua: TStringField;
+    CDSClientesNumero: TStringField;
+    ClientDataSet1Cliente: TStringField;
+    ClientDataSet2Produto: TStringField;
+    QRLabel9: TQRLabel;
+    QRDBText3: TQRDBText;
+    QRDBText9: TQRDBText;
+    QRLabel10: TQRLabel;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FormRelatorioSaidaNota: TFormRelatorioSaidaNota;
+
+implementation
+
+{$R *.dfm}
+
+end.

@@ -1,0 +1,25 @@
+unit FrmFiltroImpressaoSaidaNota;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, FrmFiltroImpressao, Vcl.StdCtrls,
+  Vcl.Imaging.jpeg, Vcl.ExtCtrls;
+
+type
+  TFormFiltroImpressaoSaidaNota = class(TFormFiltroImpressao)
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FormFiltroImpressaoSaidaNota: TFormFiltroImpressaoSaidaNota;
+
+implementation
+
+{$R *.dfm}
+
+end.

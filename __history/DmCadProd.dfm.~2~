@@ -1,0 +1,7 @@
+inherited DtmCadProd: TDtmCadProd
+  inherited SQLQuery1: TSQLQuery
+    SQL.Strings = (
+      'select *'
+      'from Produtos')
+  end
+end

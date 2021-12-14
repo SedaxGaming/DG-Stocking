@@ -1,0 +1,77 @@
+unit FrmFiltroImpressaoSaidaNota;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, FrmFiltroImpressao, Vcl.StdCtrls,
+  Vcl.Imaging.jpeg, Vcl.ExtCtrls;
+
+type
+  TFormFiltroImpressaoSaidaNota = class(TFormFiltroImpressao)
+    Label2: TLabel;
+    Label3: TLabel;
+    Label6: TLabel;
+    edIDVenda: TEdit;
+    edIDCliente: TEdit;
+    EdData: TEdit;
+    Label1: TLabel;
+    Label4: TLabel;
+    Label7: TLabel;
+    EdCidade: TEdit;
+    EdEstado: TEdit;
+    procedure bImprimirClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FormFiltroImpressaoSaidaNota: TFormFiltroImpressaoSaidaNota;
+
+implementation
+
+{$R *.dfm}
+
+uses FrmRelatorioSaidaNota;
+
+procedure TFormFiltroImpressaoSaidaNota.bImprimirClick(Sender: TObject);
+begin
+  inherited;
+
+FormRelatorioSaidaNota := TFormRelatorioSaidaNota.Create(self);
+  try
+    sqlFiltro := 'where 1=1';
+    if trim(edID.Text) <> '' then
+    begin
+      sqlFiltro := sqlFiltro + ' and UPPER(IDProduto) like UPPER(' +
+        QuotedStr(edID.Text + '%') + ')';
+    end;
+    if trim(edDescricao.Text) <> '' then
+    begin
+      sqlFiltro := sqlFiltro + ' and UPPER(Descricao) like UPPER(' +
+        QuotedStr(edDescricao.Text + '%') + ')';
+    end;
+    if trim(EdEmbalagem.Text) <> '' then
+    begin
+      sqlFiltro := sqlFiltro + ' and UPPER(Embalagem) like UPPER(' +
+        QuotedStr(EdEmbalagem.Text + '%') + ')';
+    end;
+    if trim(EdFornecedor.Text) <> '' then
+    begin
+      sqlFiltro := sqlFiltro + ' and UPPER(fornecedores_IdFornecedor) like UPPER(' +
+        QuotedStr(EdFornecedor.Text + '%') + ')';
+    end;
+    FormRelatorioSaidaNota.SQLQuery1.Close;
+    FormRelatorioSaidaNota.SQLQuery1.SQL.Add(sqlFiltro);
+    FormRelatorioSaidaNota.SQLQuery1.Open;
+    FormRelatorioSaidaNota.SQLQuery1.First;
+    FormRelatorioSaidaNota.QuickRep.Preview;
+  finally
+    FreeAndNil(FormRelatorioSaidaNota);
+  end;
+
+end;
+
+end.
